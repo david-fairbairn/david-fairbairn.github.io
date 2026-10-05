@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/hero-media.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -27,7 +28,9 @@
   </header>
 
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
+    <!-- Set a video URL or a JSON array of image URLs to customise the banner. -->
+    <section class="hero hero-banner wrap" aria-labelledby="hero-title" data-hero-video="" data-hero-poster="" data-hero-images='[]' data-hero-interval="6000">
+      <div class="hero-media" aria-hidden="true"></div>
       <div class="hero-copy">
         <p class="eyebrow">Mathematics · Research · Engineering</p>
         <h1 id="hero-title">David<br><em>Fairbairn.</em></h1>
@@ -45,7 +48,7 @@
         <span class="art-label">Connections, paths & possibilities</span>
         <span class="art-index">01 / Graphs</span>
       </div>
-      <div class="hero-foot"><span>Research · Practice · Exploration</span><a href="about.html">More about me <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-foot"><span>Research · Practice · Exploration</span><button class="hero-motion-toggle" type="button" hidden>Pause background</button><a href="about.html">More about me <span aria-hidden="true">↗</span></a></div>
     </section>
     <section class="section wrap" aria-labelledby="explore-title">
       <div class="section-heading"><div><p class="eyebrow">Explore</p><h2 id="explore-title">Research, practice & perspective.</h2></div></div>
@@ -56,6 +59,6 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer wrap"><span>© David Fairbairn</span><span>Always a work in progress.</span><a href="#">Back to top <span aria-hidden="true">↑</span></a></footer>
+  <footer class="site-footer wrap"><span>© David Fairbairn</span><span class="ai-credit">Built with AI assistance from OpenAI Codex · <a href="about.html#ai-disclosure">AI disclosure</a></span><a href="#">Back to top <span aria-hidden="true">↑</span></a></footer>
 </body>
 </html>

@@ -1,6 +1,14 @@
 # David Fairbairn — personal portfolio
 
-A responsive, multi-page portfolio for GitHub Pages. Plain HTML and CSS: no packages, JavaScript, or build step required. All pages load three font families from Google Fonts: Open Sans for body text; Inter for navigation, labels, buttons, and supporting interface text; and Cormorant Garamond for headings, publication titles, and introductory display text. Shared font variables in `assets/style.css` keep these roles consistent, with system sans-serif and Georgia fallbacks. The decorative graph illustration is inline SVG.
+A responsive, multi-page portfolio for GitHub Pages. Plain HTML and CSS with a small optional JavaScript controller for the home-page hero media: no packages or build step required. All pages load three font families from Google Fonts: Open Sans for body text; Inter for navigation, labels, buttons, and supporting interface text; and Cormorant Garamond for headings, publication titles, and introductory display text. Shared font variables in `assets/style.css` keep these roles consistent, with system sans-serif and Georgia fallbacks. The decorative graph illustration is inline SVG.
+
+## AI assistance and attribution
+
+This website was created with assistance from OpenAI Codex, an AI coding assistant. AI was used to generate and refine page layouts, HTML, CSS, JavaScript, and website copy in response to David Fairbairn’s instructions, including typography and the home-page hero media implementation.
+
+Biographical and professional information was adapted from David’s existing website and CV. Research publications retain their named authorship and link to their original sources.
+
+Every page includes a visible AI credit linking to the fuller disclosure at `about.html#ai-disclosure`, including on mobile. Keep these credits and this description accurate when updating the site, and identify any future AI-generated photographs, illustrations, or video alongside those assets.
 
 ## Pages
 
@@ -17,6 +25,17 @@ All pages share `assets/style.css`. Navigation and footers are plain HTML in eac
 ## Preview locally
 
 From this folder, run `python -m http.server 8000`, then open http://localhost:8000.
+
+## Home-page hero banner
+
+The front-page title sits over a full-width media layer with a dark contrast overlay. The graph illustration is the fallback when no media is configured, JavaScript is disabled, or files fail to load. Add your media files under `assets/hero/` and edit the attributes on `<section class="hero hero-banner wrap">` in `index.html`:
+
+- **Image slideshow:** set `data-hero-images='["assets/hero/image-1.jpg", "assets/hero/image-2.jpg"]'`. Images crossfade every six seconds. One image produces a static banner. The array order determines the sequence; failed images are skipped.
+- **Video:** set `data-hero-video="assets/hero/banner.mp4"` and optionally `data-hero-poster="assets/hero/poster.jpg"`. Video plays muted, loops, and works inline on mobile. A configured video takes priority over the slideshow; the poster and images remain available as fallbacks.
+- **Timing:** set `data-hero-interval="6000"` to the duration in milliseconds between slides (minimum 3000).
+- **Cropping:** adjust `object-position` on `.hero-slide,.hero-video` in `assets/style.css` if the focal point needs moving.
+
+Use landscape images and a compressed browser-compatible MP4. Media URLs are relative to the home page. The visible pause/play button controls animation; reduced-motion users start with a still image or video frame, and playback pauses when the tab is hidden. Keep the media decorative because its visual contents are hidden from screen readers; the title, description, and links remain normal accessible HTML.
 
 ## Personalise
 

@@ -1,6 +1,6 @@
 # David Fairbairn — personal portfolio
 
-A responsive, multi-page portfolio for GitHub Pages. Plain HTML and CSS: no packages, JavaScript, or build step required. Inter is loaded from Google Fonts for body text and navigation, with system sans-serif fallbacks; headings, publication titles, and introductory display text use Computer Modern Serif via jsDelivr, with Georgia as a fallback. The webfont source is [vsalvino/computer-modern](https://github.com/vsalvino/computer-modern). The decorative graph illustration is inline SVG.
+A responsive, multi-page portfolio for GitHub Pages. Plain HTML and CSS: no packages, JavaScript, or build step required. All pages load three font families from Google Fonts: Open Sans for body text; Inter for navigation, labels, buttons, and supporting interface text; and Cormorant Garamond for headings, publication titles, and introductory display text. Shared font variables in `assets/style.css` keep these roles consistent, with system sans-serif and Georgia fallbacks. The decorative graph illustration is inline SVG.
 
 ## Pages
 

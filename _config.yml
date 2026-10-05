@@ -1,3 +1,9 @@
-theme: jekyll-theme-minimal
 title: David Fairbairn
-description: Bookmark this to keep an eye on my project updates!
+description: Mathematics, multi-agent systems, research, and engineering.
+url: "https://david-fairbairn.github.io"
+exclude:
+  - README.md
+  - scripts
+  - tests
+  - data
+  - requirements.txt
